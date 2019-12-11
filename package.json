@@ -24,7 +24,7 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.0.0",
-    "imagemin-webpack": "^5.1.0"
+    "imagemin-webpack": "^5.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
