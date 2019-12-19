@@ -33,6 +33,7 @@
     "@nuxtjs/module-test-utils": "latest",
     "codecov": "latest",
     "eslint": "latest",
+    "glob": "latest",
     "husky": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
