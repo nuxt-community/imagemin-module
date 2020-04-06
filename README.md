@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
@@ -81,17 +81,17 @@ Images will be minified in development mode, if this option is set to `true`.
 Copyright (c) Nuxt Community
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/imagemin/latest.svg?style=flat-square
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/imagemin/latest.svg
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/imagemin
 
-[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/imagemin.svg?style=flat-square
+[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/imagemin.svg
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/imagemin
 
-[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/imagemin-module.svg?style=flat-square
-[circle-ci-href]: https://circleci.com/gh/nuxt-community/imagemin-module
+[github-actions-ci-src]: https://github.com/nuxt-community/imagemin-module/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/nuxt-community/imagemin-module/actions?query=workflow%3Aci
 
-[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/imagemin-module.svg?style=flat-square
+[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/imagemin-module.svg
 [codecov-href]: https://codecov.io/gh/nuxt-community/imagemin-module
 
-[license-src]: https://img.shields.io/npm/l/@nuxtjs/imagemin.svg?style=flat-square
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/imagemin.svg
 [license-href]: https://npmjs.com/package/@nuxtjs/imagemin
