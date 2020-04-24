@@ -1,5 +1,5 @@
 const { resolve } = require('path')
-const { statSync } = require('fs')
+const { statSync } = require('fs-extra')
 const { setup, loadConfig, get } = require('@nuxtjs/module-test-utils')
 const glob = require('glob')
 
