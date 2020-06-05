@@ -19,7 +19,7 @@
   "dependencies": {
     "consola": "^2.12.2",
     "imagemin-gifsicle": "^7.0.0",
-    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
