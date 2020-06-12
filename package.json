@@ -17,7 +17,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
-    "consola": "^2.12.2",
+    "consola": "^2.13.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
