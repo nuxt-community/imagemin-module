@@ -74,6 +74,12 @@ Images will be minified in development mode, if this option is set to `true`.
   ]
 ```
 
+## Development
+
+1. Clone this repository
+2. Install dependencies using `yarn install` or `npm install`
+3. Start development server using `npm run dev`
+
 ## License
 
 [MIT License](./LICENSE)
