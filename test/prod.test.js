@@ -1,27 +1,20 @@
 const { resolve } = require('path')
 const { statSync } = require('fs-extra')
-const { setup, loadConfig, get } = require('@nuxtjs/module-test-utils')
+const { setupTest, getNuxt } = require('@nuxt/test-utils')
 const glob = require('glob')
 
 describe('prod', () => {
-  let nuxt
-
-  beforeAll(async () => {
-    ({ nuxt } = (await setup(loadConfig(__dirname, null, { dev: false }))))
-  }, 60000)
-
-  afterAll(async () => {
-    await nuxt.close()
-  })
-
-  test('render', async () => {
-    const html = await get('/')
-    expect(html).toContain('Works!')
+  setupTest({
+    build: true,
+    config: {
+      dev: false
+    }
   })
 
   test('image minify', () => {
-    const originalFileSize = statSync(resolve(nuxt.options.rootDir, nuxt.options.dir.assets, 'example.png')).size
-    const mapFiles = glob.sync(resolve(nuxt.options.buildDir, 'dist/client/**/*.png'))
+    const { options } = getNuxt()
+    const originalFileSize = statSync(resolve(options.rootDir, options.dir.assets, 'example.png')).size
+    const mapFiles = glob.sync(resolve(options.buildDir, 'dist/client/**/*.png'))
     const minFileSize = statSync(mapFiles[0]).size
 
     expect(originalFileSize).toBeGreaterThan(minFileSize)

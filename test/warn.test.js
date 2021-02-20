@@ -1,21 +1,20 @@
-const { setup, loadConfig } = require('@nuxtjs/module-test-utils')
+const { setupTest } = require('@nuxt/test-utils')
 
 const logger = require('../lib/logger')
 logger.mockTypes(() => jest.fn())
 
 describe('warn', () => {
-  let nuxt
-
-  beforeAll(async () => {
-    ({ nuxt } = (await setup(loadConfig(__dirname, null, { dev: true, imagemin: { enableInDev: true } }))))
-  }, 60000)
+  setupTest({
+    config: {
+      dev: true,
+      imagemin: {
+        enableInDev: true
+      }
+    }
+  })
 
   beforeEach(() => {
     logger.clear()
-  })
-
-  afterAll(async () => {
-    await nuxt.close()
   })
 
   test('should warn if enabled in dev mode', () => {
