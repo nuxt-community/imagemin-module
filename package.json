@@ -7,36 +7,43 @@
   "contributors": [
     "Ricardo Gobbo de Souza <ricardogobbosouza@yahoo.com.br>"
   ],
-  "main": "lib/module.js",
+  "main": "./dist/module.js",
+  "types": "./dist/module.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "dev": "nuxt test/fixture",
-    "lint": "eslint --ext .js,.vue .",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint && jest"
+    "build": "siroc build",
+    "prepublishOnly": "yarn build",
+    "dev": "nuxt dev test/fixture",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish",
+    "test": "yarn lint && yarn jest"
   },
   "dependencies": {
-    "consola": "^2.15.0",
+    "consola": "^2.15.3",
+    "image-minimizer-webpack-plugin": "^1.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^8.0.0",
-    "imagemin-webpack": "^5.1.1"
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "latest",
-    "@nuxtjs/module-test-utils": "latest",
+    "@babel/preset-typescript": "latest",
+    "@nuxt/test-utils": "latest",
+    "@nuxt/types": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "del": "latest",
     "eslint": "latest",
+    "fs-extra": "latest",
     "glob": "latest",
-    "husky": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest",
+    "nuxt": "latest",
+    "siroc": "latest",
     "standard-version": "latest"
   },
   "publishConfig": {

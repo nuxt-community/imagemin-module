@@ -4,9 +4,3 @@
     <img src="~/assets/example.png">
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>

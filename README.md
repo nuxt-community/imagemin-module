@@ -49,7 +49,7 @@ export default {
 
 ## Options
 
-See [imagemin-webpack options](https://github.com/itgalaxy/imagemin-webpack#options) for the complete list of options available.
+See [image-minimizer-webpack-plugin](https://github.com/webpack-contrib/image-minimizer-webpack-plugin#options) for the complete list of options available.
 
 ### `enableInDev`
 
@@ -60,18 +60,18 @@ Images will be minified in development mode, if this option is set to `true`.
 
 **This could increase the build time.**
 
-## `imageminOptions`
+## `minimizerOptions`
 
 - Type: `Object`
 - Default:
 
 ```js
-  plugins: [
-    ['gifsicle', { interlaced: true }],
-    ['jpegtran', { progressive: true }],
-    ['optipng', { optimizationLevel: 5 }],
-    ['svgo', { plugins: [{ removeViewBox: false }] }]
-  ]
+plugins: [
+  ['gifsicle', { interlaced: true }],
+  ['jpegtran', { progressive: true }],
+  ['optipng', { optimizationLevel: 5 }],
+  ['svgo', { plugins: [{ removeViewBox: false }] }]
+]
 ```
 
 ## Development
