@@ -1,7 +1,7 @@
-const { resolve } = require('path')
-const { statSync } = require('fs-extra')
-const { setupTest, getNuxt } = require('@nuxt/test-utils')
-const glob = require('glob')
+import { resolve } from 'path'
+import { statSync } from 'fs-extra'
+import { setupTest, getNuxt } from '@nuxt/test-utils'
+import { sync as globSync } from 'glob'
 
 describe('prod', () => {
   setupTest({
@@ -14,7 +14,7 @@ describe('prod', () => {
   test('image minify', () => {
     const { options } = getNuxt()
     const originalFileSize = statSync(resolve(options.rootDir, options.dir.assets, 'example.png')).size
-    const mapFiles = glob.sync(resolve(options.buildDir, 'dist/client/**/*.png'))
+    const mapFiles = globSync(resolve(options.buildDir, 'dist/client/**/*.png'))
     const minFileSize = statSync(mapFiles[0]).size
 
     expect(originalFileSize).toBeGreaterThan(minFileSize)

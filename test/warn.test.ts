@@ -1,7 +1,6 @@
-const { setupTest } = require('@nuxt/test-utils')
+import { setupTest, mockConsola } from '@nuxt/test-utils'
 
-const logger = require('../lib/logger')
-logger.mockTypes(() => jest.fn())
+const logger = mockConsola()
 
 describe('warn', () => {
   setupTest({
@@ -11,10 +10,6 @@ describe('warn', () => {
         enableInDev: true
       }
     }
-  })
-
-  beforeEach(() => {
-    logger.clear()
   })
 
   test('should warn if enabled in dev mode', () => {

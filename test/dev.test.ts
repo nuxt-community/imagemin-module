@@ -1,4 +1,4 @@
-const { setupTest, get } = require('@nuxt/test-utils')
+import { setupTest, get } from '@nuxt/test-utils'
 
 describe('dev', () => {
   setupTest({
