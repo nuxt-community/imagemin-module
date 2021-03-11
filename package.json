@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/imagemin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically optimize (compress) all images used in Nuxt.js",
   "repository": "nuxt-community/imagemin-module",
   "license": "MIT",
