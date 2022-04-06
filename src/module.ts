@@ -15,7 +15,7 @@ interface PluginOptions {
   filter?: Function;
   cache?: boolean;
   severityError?: boolean | string;
-  minimizerOptions: object;
+  minimizerOptions?: object;
   loader?: boolean;
   maxConcurrency?: number;
   filename?: string;
@@ -36,7 +36,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
         ['gifsicle', { interlaced: true }],
         ['jpegtran', { progressive: true }],
         ['optipng', { optimizationLevel: 5 }],
-        ['svgo', { plugins: [{ removeViewBox: false }] }]
+        ['svgo', { plugins: [{ name: 'removeViewBox', active: false }] }]
       ]
     }
   }
