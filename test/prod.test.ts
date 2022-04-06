@@ -13,10 +13,14 @@ describe('prod', () => {
 
   test('image minify', () => {
     const { options } = getNuxt()
-    const originalFileSize = statSync(resolve(options.rootDir, options.dir.assets, 'example.png')).size
-    const mapFiles = globSync(resolve(options.buildDir, 'dist/client/**/*.png'))
-    const minFileSize = statSync(mapFiles[0]).size
+    const files = [
+      'example.png',
+      'nuxt.svg'
+    ]
+    const originalFileSizes = files.map(file => statSync(resolve(options.rootDir, options.dir.assets, file)).size)
+    const minFileSizes = files
+      .map(file => statSync(globSync(resolve(options.buildDir, 'dist/client/img', file.replace('.', '.*.')))[0]).size)
 
-    expect(originalFileSize).toBeGreaterThan(minFileSize)
+    originalFileSizes.forEach((oSize, index) => expect(oSize).toBeGreaterThan(minFileSizes[index]))
   })
 })
