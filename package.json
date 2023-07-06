@@ -21,7 +21,7 @@
     "test": "yarn lint && yarn jest"
   },
   "dependencies": {
-    "consola": "^2.15.3",
+    "consola": "^3.2.3",
     "image-minimizer-webpack-plugin": "^1.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
